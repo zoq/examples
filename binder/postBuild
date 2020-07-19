@@ -41,6 +41,7 @@ jupyter labextension link --debug
 
 cd "$SRCDIR"
 git clone https://github.com/QuantStack/xplot.git
+cd xplot
 mkdir build
 cd build
 cmake ..
