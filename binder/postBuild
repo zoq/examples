@@ -31,17 +31,19 @@ python -m pip install seaborn
 # repo2docker copies this repo into $HOME which means jupyter labextension
 # picks up hidden dot files and runs into problems so install from a
 # different directory.
-SRCDIR=/srv/conda/src/jupyter-offlinenotebook
-mkdir -p "$SRCDIR"
+SRCDIROFFLINE=/srv/conda/src/jupyter-offlinenotebook
+mkdir -p "$SRCDIROFFLINE"
 
-cd "$SRCDIR"
+cd "$SRCDIROFFLINE"
 git clone https://github.com/manics/jupyter-offlinenotebook.git .
 python -m pip install .
 jupyter labextension link --debug
 
-cd "$SRCDIR"
-git clone https://github.com/QuantStack/xplot.git
-cd xplot
+SRCDIRXPLOT=/srv/conda/src/xplot
+mkdir -p "$SRCDIRXPLOT"
+
+cd "$SRCDIRXPLOT"
+git clone https://github.com/QuantStack/xplot.git .
 mkdir build
 cd build
 cmake ..
