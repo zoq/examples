@@ -21,7 +21,7 @@ conda install -c zoq -c QuantStack -c conda-forge -c hi2p-perim xeus-cling mlpac
 jupyter labextension install @jupyterlab/debugger
 jupyter labextension install @jupyterlab/toc
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
-jupyter labextension install bqplot@^0.4.3
+jupyter labextension install bqplot
 #jupyter labextension install @jupyter-widgets/jupyterlab-manager
 #jupyter labextension install bqplot
 
@@ -45,7 +45,7 @@ SRCDIRXPLOT=/srv/conda/src/xplot
 mkdir -p "$SRCDIRXPLOT"
 
 cd "$SRCDIRXPLOT"
-git clone https://github.com/QuantStack/xplot.git .
+git clone https://github.com/zoq/xplot.git .
 mkdir build
 cd build
 cmake -DCMAKE_INSTALL_PREFIX=/srv/conda/envs/notebook/ ..
