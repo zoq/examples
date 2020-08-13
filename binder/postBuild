@@ -105,8 +105,8 @@ cat >| ./binder/gophernotes/kernel.json << EOF
 EOF
 jupyter kernelspec install ./binder/gophernotes --user
 
-go get -u -d mlpack.org/v1/mlpack
-CGO_CFLAGS="-I/srv/conda/envs/notebook/include" CGO_LDFLAGS="-L/srv/conda/envs/notebook/lib/" go install -v mlpack.org/v1/mlpack
+#go get -u -d mlpack.org/v1/mlpack
+#CGO_CFLAGS="-I/srv/conda/envs/notebook/include" CGO_LDFLAGS="-L/srv/conda/envs/notebook/lib/" go install -v mlpack.org/v1/mlpack
 
 # Add mlpack dependencies to the main header.
 rm /srv/conda/envs/notebook/include/mlpack/core.hpp
