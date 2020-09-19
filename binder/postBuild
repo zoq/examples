@@ -51,7 +51,7 @@ make install
 
 jupyter kernelspec remove -f xcpp11
 jupyter kernelspec remove -f xcpp17
-
+wget https://gist.githubusercontent.com/zoq/a4213dc8ac14bc26c1e011163235ff07/raw/4276dcdd4d2ea0d9be7dee99f21b40271fc4221a/kernel.json -O /srv/conda/envs/notebook/share/jupyter/kernels/xcpp14/kernel.json
 GOVERS=1.13.5
 
 mkdir -p \
