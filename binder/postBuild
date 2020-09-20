@@ -27,7 +27,7 @@ git clone https://github.com/zoq/xwidgets.git
 cd xwidgets
 mkdir build
 cd build
-cmake ..
+cmake -DCMAKE_INSTALL_PREFIX=/srv/conda/envs/notebook/ ..
 make install
 cd ../../
 
